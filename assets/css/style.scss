@@ -50,82 +50,96 @@ body {
 // HEADER
 
 header {
-  height: $header-height;
-  max-width: 34.2rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
+  transition: 200ms;
 
-  .logo a {
-    text-decoration: none;
-    color: $base-color;
-    font-weight: 600;
-    font-size: 2.1rem;
-  }
+  .content {
+    height: $header-height;
+    max-width: 34.2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  .btn-open {
-    font-size: 4.2rem;
-    color: $base-color;
-    cursor: pointer;
-  }
-
-  .menu {
-    visibility: hidden;
-    opacity: 0;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: $overlay;
-    transition: 200ms;
-
-    ul {
-      width: 80%;
-      height: 100vh;
-      background: $base-color;
-      padding-top: 12rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translateX(100%);
-      transition: 500ms;
-
-      li {
-        margin-left: 1.5rem;
-        margin-bottom: 3rem;
-
-        a {
-          font-size: 2.1rem;
-          font-weight: 400;
-          text-decoration: none;
-          color: $green-light;
-        }
-      }
-
+    .logo a {
+      text-decoration: none;
+      color: $base-color;
+      font-weight: 600;
+      font-size: 2.1rem;
     }
-
-    .icons .btn-close {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
+    
+    .btn-open {
       font-size: 4.2rem;
-      color: $green-light;
+      color: $base-color;
       cursor: pointer;
     }
 
-    &.active {
-      visibility: visible;
-      opacity: 1;
+    .menu {
+      visibility: hidden;
+      opacity: 0;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $overlay;
+      transition: 200ms;
+
+      ul {
+        width: 80%;
+        height: 100vh;
+        background: $base-color;
+        padding-top: 12rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: 500ms;
+
+        li {
+          margin-left: 1.5rem;
+          margin-bottom: 3rem;
+
+          a {
+            font-size: 2.1rem;
+            font-weight: 400;
+            text-decoration: none;
+            color: $green-light;
+          }
+        }
+
+      }
+
+      .icons .btn-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 4.2rem;
+        color: $green-light;
+        cursor: pointer;
+      }
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &.active ul {
+        transform: translateX(0);
+      }
     }
 
-    &.active ul {
-      transform: translateX(0);
+  }
+
+  &.scroll {
+    background: $base-color;
+
+    .btn-open, .content .logo a{
+      color: $green-light;
     }
   }
 
@@ -156,7 +170,7 @@ header {
 .about {
   background-color: $base-color;
   
-  .content {
+  .container {
     @extend .container;
 
     img {
@@ -180,4 +194,179 @@ header {
       color: $green-light;
     }
   }
+}
+
+// SERVICES
+
+.services {
+  padding: 6rem 0 6rem;
+  position: relative;
+
+  h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: $green-dark;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: $green-dark;
+    text-align: center;
+    margin-bottom: 3rem; 
+  }
+
+  .sevice-wrapper{
+    display: grid;
+    gap: 3rem;
+
+    .item {
+      width: 100%;
+      padding: 7rem 3rem 8rem;
+      text-align: center;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 1.8rem 0 rgba(0,0,0,0.10);
+      transition: 200ms;
+  
+      i {
+        font-size: 4.2rem;
+        color: $base-color;
+        margin-bottom: 3rem;
+      }
+  
+      h3 {
+        font-size: 2.6rem;
+        color: $base-color;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        font-size: 2.1rem;
+        color: $base-color;
+      }
+
+      &:hover {
+        background: $base-color;
+    
+        i, h3, p {
+          color: $green-light;
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(90deg, #368055 -42.22%, #F3F6F6 75.85%);
+  }
+  
+}
+
+// TESTEMONIALS
+
+.testimonials {
+  padding: 6rem 0 6rem;
+  position: relative;
+
+  .container {
+    @extend .container;
+    
+    .title {
+      h2 {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: $green-dark;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+  
+      p {
+        font-size: 1.6rem;
+        color: $green-dark;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+    }
+    
+    .testemony-wrapper {
+
+      .testemony {
+        background: $base-color;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 0 1.8rem 0 rgba(0,0,0,0.10);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          width: 100%;
+          padding: 3rem 3rem 6rem;
+          background: $green-light;
+          font-size: 1.6rem;
+          color: $green-dark;
+          position: relative;
+
+          i {
+            color: $base-color;
+            font-size: 4rem;
+          }
+
+          i + i {
+            vertical-align: top;
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            bottom: -2rem;
+            width: 4rem; 
+            height: 4rem;
+            background: $green-light;
+          }
+        }
+
+        img {
+          width: 8.5rem;
+          height: 8.5rem;
+          margin-top: 6rem;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 3rem;
+        }
+
+        h3 {
+          font-size: 2.1rem;
+          font-weight: 400;
+          color: $green-light;
+        }
+
+        span {
+          font-size: 1.6rem;
+          color: $gray;
+        }
+      }
+    }
+    
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(270deg, #368055 0%, #F3F6F6 81.77%);
+  }
+
 }

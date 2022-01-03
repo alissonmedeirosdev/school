@@ -26,13 +26,23 @@ body {
   background: #F3F6F6;
 }
 
-.container, .about .content {
+.container, .about .container, .testimonials .container {
   padding: 18rem 0rem 6rem;
   max-width: 34.2rem;
   margin: 0 auto;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+header .content {
   height: 7rem;
   max-width: 34.2rem;
   margin: 0 auto;
@@ -45,26 +55,22 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
-header .logo a {
+header .content .logo a {
   text-decoration: none;
   color: #368055;
   font-weight: 600;
   font-size: 2.1rem;
 }
 
-header .btn-open {
+header .content .btn-open {
   font-size: 4.2rem;
   color: #368055;
   cursor: pointer;
 }
 
-header .menu {
+header .content .menu {
   visibility: hidden;
   opacity: 0;
   width: 100vw;
@@ -77,7 +83,7 @@ header .menu {
   transition: 200ms;
 }
 
-header .menu ul {
+header .content .menu ul {
   width: 80%;
   height: 100vh;
   background: #368055;
@@ -91,19 +97,19 @@ header .menu ul {
   transition: 500ms;
 }
 
-header .menu ul li {
+header .content .menu ul li {
   margin-left: 1.5rem;
   margin-bottom: 3rem;
 }
 
-header .menu ul li a {
+header .content .menu ul li a {
   font-size: 2.1rem;
   font-weight: 400;
   text-decoration: none;
   color: #F3F6F6;
 }
 
-header .menu .icons .btn-close {
+header .content .menu .icons .btn-close {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -112,14 +118,22 @@ header .menu .icons .btn-close {
   cursor: pointer;
 }
 
-header .menu.active {
+header .content .menu.active {
   visibility: visible;
   opacity: 1;
 }
 
-header .menu.active ul {
+header .content .menu.active ul {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+header.scroll {
+  background: #368055;
+}
+
+header.scroll .btn-open, header.scroll .content .logo a {
+  color: #F3F6F6;
 }
 
 .home {
@@ -144,25 +158,199 @@ header .menu.active ul {
   background-color: #368055;
 }
 
-.about .content img {
+.about .container img {
   border-radius: 1.5rem;
   margin-bottom: 3rem;
 }
 
-.about .content .about-data {
+.about .container .about-data {
   display: -ms-grid;
   display: grid;
   gap: 3rem;
 }
 
-.about .content h2 {
+.about .container h2 {
   font-size: 2.6rem;
   font-weight: 700;
   color: #F3F6F6;
 }
 
-.about .content p {
+.about .container p {
   font-size: 1.6rem;
   color: #F3F6F6;
+}
+
+.services {
+  padding: 6rem 0 6rem;
+  position: relative;
+}
+
+.services h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0B1D15;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services p {
+  font-size: 1.6rem;
+  color: #0B1D15;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services .sevice-wrapper {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+}
+
+.services .sevice-wrapper .item {
+  width: 100%;
+  padding: 7rem 3rem 8rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 1.8rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.8rem 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.services .sevice-wrapper .item i {
+  font-size: 4.2rem;
+  color: #368055;
+  margin-bottom: 3rem;
+}
+
+.services .sevice-wrapper .item h3 {
+  font-size: 2.6rem;
+  color: #368055;
+  margin-bottom: 3rem;
+}
+
+.services .sevice-wrapper .item p {
+  font-size: 2.1rem;
+  color: #368055;
+}
+
+.services .sevice-wrapper .item:hover {
+  background: #368055;
+}
+
+.services .sevice-wrapper .item:hover i, .services .sevice-wrapper .item:hover h3, .services .sevice-wrapper .item:hover p {
+  color: #F3F6F6;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: .2rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-42.22%, #368055), color-stop(75.85%, #F3F6F6));
+  background: linear-gradient(90deg, #368055 -42.22%, #F3F6F6 75.85%);
+}
+
+.testimonials {
+  padding: 6rem 0 6rem;
+  position: relative;
+}
+
+.testimonials .container .title h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0B1D15;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.testimonials .container .title p {
+  font-size: 1.6rem;
+  color: #0B1D15;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials .container .testemony-wrapper .testemony {
+  background: #368055;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0 0 1.8rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1.8rem 0 rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials .container .testemony-wrapper .testemony p {
+  width: 100%;
+  padding: 3rem 3rem 6rem;
+  background: #F3F6F6;
+  font-size: 1.6rem;
+  color: #0B1D15;
+  position: relative;
+}
+
+.testimonials .container .testemony-wrapper .testemony p i {
+  color: #368055;
+  font-size: 4rem;
+}
+
+.testimonials .container .testemony-wrapper .testemony p i + i {
+  vertical-align: top;
+}
+
+.testimonials .container .testemony-wrapper .testemony p::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  bottom: -2rem;
+  width: 4rem;
+  height: 4rem;
+  background: #F3F6F6;
+}
+
+.testimonials .container .testemony-wrapper .testemony img {
+  width: 8.5rem;
+  height: 8.5rem;
+  margin-top: 6rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 3rem;
+}
+
+.testimonials .container .testemony-wrapper .testemony h3 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #F3F6F6;
+}
+
+.testimonials .container .testemony-wrapper .testemony span {
+  font-size: 1.6rem;
+  color: #89A4A9;
+}
+
+.testimonials::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: .2rem;
+  background: -webkit-gradient(linear, right top, left top, from(#368055), color-stop(81.77%, #F3F6F6));
+  background: linear-gradient(270deg, #368055 0%, #F3F6F6 81.77%);
 }
 /*# sourceMappingURL=style.css.map */
