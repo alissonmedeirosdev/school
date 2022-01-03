@@ -18,6 +18,11 @@ ul, li {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 // BASE
   
   // VARIABLES
@@ -124,4 +129,55 @@ header {
     }
   }
 
+}
+
+// HOME
+
+.home {
+  margin-top: $header-height;
+
+  h1 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: $base-color;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.6rem;
+    color: $base-color;
+  }
+} 
+
+// ABOUT
+
+.about {
+  background-color: $base-color;
+  
+  .content {
+    @extend .container;
+
+    img {
+      border-radius: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .about-data {
+      display: grid;
+      gap: 3rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: $green-light;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: $green-light;
+    }
+  }
 }

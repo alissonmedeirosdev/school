@@ -17,11 +17,16 @@ ul, li {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   background: #F3F6F6;
 }
 
-.container {
+.container, .about .content {
   padding: 18rem 0rem 6rem;
   max-width: 34.2rem;
   margin: 0 auto;
@@ -115,5 +120,49 @@ header .menu.active {
 header .menu.active ul {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.home {
+  margin-top: 7rem;
+}
+
+.home h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #368055;
+  margin-bottom: 3rem;
+}
+
+.home p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #368055;
+}
+
+.about {
+  background-color: #368055;
+}
+
+.about .content img {
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.about .content .about-data {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+}
+
+.about .content h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #F3F6F6;
+}
+
+.about .content p {
+  font-size: 1.6rem;
+  color: #F3F6F6;
 }
 /*# sourceMappingURL=style.css.map */
