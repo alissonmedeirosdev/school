@@ -327,8 +327,6 @@ header.scroll .btn-open, header.scroll .content .logo a {
   height: 8.5rem;
   margin-top: 6rem;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
   margin-bottom: 3rem;
 }
 
