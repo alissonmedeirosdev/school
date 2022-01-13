@@ -353,4 +353,113 @@ header.scroll .btn-open, header.scroll .content .logo a {
   background: -webkit-gradient(linear, right top, left top, from(#368055), color-stop(81.77%, #F3F6F6));
   background: linear-gradient(270deg, #368055 0%, #F3F6F6 81.77%);
 }
+
+.contact h2 {
+  font-size: 2.6rem;
+  color: #0B1D15;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.contact p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.contact .infos .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6rem;
+}
+
+.contact .infos .info span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6.4rem;
+  height: 6.4rem;
+  background-color: #368055;
+  margin-right: 2.3rem;
+  font-size: 3.4rem;
+  border-radius: .8rem;
+}
+
+.contact .infos .info .description h3 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #0B1D15;
+}
+
+.contact .infos .info .description p {
+  margin-bottom: 0;
+}
+
+.contact form input {
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: transparent;
+  border: 0.1rem solid #0B1D15;
+  border-radius: .8rem;
+}
+
+.contact form input::-webkit-input-placeholder {
+  color: #89A4A9;
+}
+
+.contact form input:-ms-input-placeholder {
+  color: #89A4A9;
+}
+
+.contact form input::-ms-input-placeholder {
+  color: #89A4A9;
+}
+
+.contact form input::placeholder {
+  color: #89A4A9;
+}
+
+.contact form textarea {
+  background: transparent;
+  border: 0.1rem solid #0B1D15;
+  padding: 1.5rem;
+  resize: none;
+  width: 100%;
+  height: 13.7rem;
+  border-radius: .8rem;
+  margin-bottom: 3rem;
+}
+
+.contact form button {
+  background: #368055;
+  padding: 1.5rem 0;
+  color: #F3F6F6;
+  width: 15.8rem;
+  font-size: 1.6rem;
+  border-radius: .8rem;
+}
+
+footer {
+  background-color: #368055;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  color: #F3F6F6;
+  padding: 2.1rem 0;
+  font-size: 1.3rem;
+}
 /*# sourceMappingURL=style.css.map */
