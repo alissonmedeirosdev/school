@@ -1,6 +1,6 @@
 ![PreviewSchool](./.github/preview.png)
 
-## Tecnologies
+## Technologies
 
 - HTML
 - CSS
